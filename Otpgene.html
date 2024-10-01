@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<p id="p1"></p>
+    
+    <div id="myContainer"></div>
+    <script>
+    
+    let h1Element = document.createElement("h1");
+    h1Element.textContent = "GET 5 DIGIT OTP";
+    containerElement.style.textAlign="center"
+    containerElement.style.padding="6vh"
+    containerElement.style.borderRadius="6vh"
+    containerElement.appendChild(h1Element);
+
+    let btnElement = document.createElement("button");
+    btnElement.style.backgroundColor="yellow";
+    btnElement.style.width="8vh";
+    btnElement.style.height="8vh";
+    btnElement.style.borderRadius="12vh"
+    btnElement.textContent = "OTP";
+    btnElement.style.border="none"
+    containerElement.appendChild(btnElement);
+    btnElement.addEventListener('mouseout',(event)=>{
+    let x="0123456789";
+    let otp="";
+    let len=x.length
+    for(i=0;i<5;i++){
+        otp+=x[Math.floor(Math.random()*(len))]
+        let p1=document.getElementById("p1");
+       }
+        console.log(`OTP OF 5 DIGIT IS : ${otp}`)
+        h1Element.textContent=otp
+    })
+    </script>
+</body>
+</html>
